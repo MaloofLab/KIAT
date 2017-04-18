@@ -122,7 +122,7 @@ get.fitted.value.no.rep <- function(reads.formated){
 ## coverage test (all VS 3/4 VS 1/2 VS 1/4)
 ```{r} 
 ######### all trimmed data 
-setwd("~/Desktop/Brassica_project/KIAT_RNA_seq/analysis/")
+if(!Sys.getenv("USER")=="jmaloof")  setwd("~/Desktop/Brassica_project/KIAT_RNA_seq/analysis/")
 flowering.read.count.all <- read.table("read_count/read.count.flowering.all.tsv", header = T, check.names = F)
 rownames(flowering.read.count.all) <- flowering.read.count.all[,1]
 flowering.read.count.all <- flowering.read.count.all[,-1]
